@@ -3,7 +3,11 @@
 "   .vim and run `python install.py --all`
 " - You need to `cargo install rusty-tags` and ctags for rust
 
+" Prevent vim from clearing the clipboard after closing
+autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
+set mouse=a
+set paste
 set nocompatible              " be iMproved, required
 set ruler
 set autoread
@@ -42,6 +46,7 @@ let g:airline#extensions#tabline#enabled = 1
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set expandtab
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype rust setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
@@ -55,6 +60,8 @@ nnoremap <leader>b :ls<CR>:b
 nnoremap <leader>gb :GoBuild<CR>
 nnoremap <leader>gi :GoImports<CR>
 nnoremap <leader>gf :GoFmt<CR>
+
+nnoremap <C-p> :FZF<CR>
 
 setlocal omnifunc=go#complete#Complete
 

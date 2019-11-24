@@ -1,4 +1,4 @@
 compton &
-feh --bg-scale Pictures/lake.png
+feh --bg-scale architecture.png
 exec i3
 wal -R
