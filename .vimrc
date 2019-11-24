@@ -43,6 +43,8 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype rust setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype haskell setlocal ts=2 sw=2 expandtab
 
 set autoindent
