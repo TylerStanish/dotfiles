@@ -15,3 +15,6 @@ alias gd='git diff'
 alias grv='git remote -v'
 alias config='/usr/bin/git --git-dir=/home/tyler/.cfg/ --work-tree=/home/tyler'
 alias copyloc='pwd | xclip -r -selection clipboard'
+
+(cat ~/.cache/wal/sequences &)
+export HISTSIZE=2000
