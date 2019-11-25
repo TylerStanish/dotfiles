@@ -8,13 +8,14 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 alias gs='git status'
-alias ga='git add'
-alias gc='git commit -m'
+alias ga='git add .'
+alias gc='git commit'
 alias gb='git branch'
 alias gd='git diff'
 alias grv='git remote -v'
 alias config='/usr/bin/git --git-dir=/home/tyler/.cfg/ --work-tree=/home/tyler'
 alias copyloc='pwd | xclip -r -selection clipboard'
+alias battery='acpi -b'
 
 (cat ~/.cache/wal/sequences &)
 export HISTSIZE=2000
