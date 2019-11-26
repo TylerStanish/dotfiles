@@ -7,7 +7,7 @@
 autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
 set mouse=a
-set paste
+"set paste
 set nocompatible              " be iMproved, required
 set ruler
 set autoread
@@ -60,9 +60,11 @@ nnoremap <leader>b :ls<CR>:b
 nnoremap <leader>gb :GoBuild<CR>
 nnoremap <leader>gi :GoImports<CR>
 nnoremap <leader>gf :GoFmt<CR>
+nnoremap <leader>w :w<CR>
 
 nnoremap <C-p> :FZF<CR>
 
+let g:ycm_filetype_whitelist = { 'go': 1 }
 setlocal omnifunc=go#complete#Complete
 
 set textwidth=80
