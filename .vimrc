@@ -35,6 +35,7 @@ Plug 'alvan/vim-closetag'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'morhetz/gruvbox'
 call plug#end()
 " autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;
 " autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
@@ -69,3 +70,5 @@ setlocal omnifunc=go#complete#Complete
 
 set textwidth=80
 set formatoptions=croqt
+
+autocmd VimLeave * call system("xsel -ib", getreg('+'))

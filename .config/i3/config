@@ -183,3 +183,4 @@ bar {
 for_window [class=".*"] border pixel 0
 gaps inner 25
 bindsym $mod+p exec "i3lock -i ~/architecture.png"
+for_window [class="jetbrains-idea" title="win0"] floating enable;
